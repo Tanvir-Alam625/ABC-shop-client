@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div>
-      <h3>ABC shop Footer</h3>
+    <div className="py-8  flex justify-center">
+      <p>Copyright &copy; 2022 ABC Shop</p>
     </div>
   );
 };

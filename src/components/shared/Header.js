@@ -1,6 +1,19 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Header = () => {
+  const links = (
+    <>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/orders">Orders</Link>
+      </li>
+      <li>
+        <Link to="/login">Login</Link>
+      </li>
+    </>
+  );
   return (
     <header className="max-w-[1100px] mx-auto">
       <div class="navbar bg-base-100">
@@ -24,28 +37,15 @@ const Header = () => {
             </label>
             <ul
               tabIndex="0"
-              class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 font-semibold"
             >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Item 2</a>
-              </li>
+              {links}
             </ul>
           </div>
           <a class="btn btn-ghost normal-case text-xl">ABC Shop</a>
         </div>
         <div class="navbar-end hidden lg:flex">
-          <ul class="menu menu-horizontal p-0">
-            <li>
-              <a>Item 1</a>
-            </li>
-
-            <li>
-              <a>Item 3</a>
-            </li>
-          </ul>
+          <ul class="menu menu-horizontal p-0 font-semibold">{links}</ul>
         </div>
       </div>
     </header>
