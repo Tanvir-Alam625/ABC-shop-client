@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "category": "lunch",
+    "name": "Beef Steak ",
+    "description": "How we dream About our future",
+    "img": "https://i.ibb.co/sWMD6VR/lunch1.png",
+    "price": 15.99,
+    "quantity": 1
+  },
+  {
+    "id": 2,
+    "category": "lunch",
+    "name": "Honey-Soy-Glazed Salmon with Peppers",
+    "description": "How we dream About our future",
+    "img": "https://i.ibb.co/rs7DmYj/lunch2.png",
+    "price": 7.99,
+    "quantity": 1
+  },
+  {
+    "id": 3,
+    "name": "Tarragon-Rubbed-Salmon",
+    "category": "lunch",
+    "description": "How we dream About our future",
+    "img": "https://i.ibb.co/phXmWyx/lunch3.png",
+    "price": 6.99,
+    "quantity": 1
+  },
+  {
+    "id": 4,
+    "category": "lunch",
+    "name": "Indian lunch",
+    "description": "How we dream About our future",
+    "img": "https://i.ibb.co/sWSjRdB/lunch4.png",
+    "price": 8.99,
+    "quantity": 1
+  },
+  {
+    "id": 5,
+    "category": "lunch",
+    "name": "Fried Chicken Benton",
+    "description": "How we dream About our future",
+    "img": "https://i.ibb.co/RQ7Lc2f/lunch5.png",
+    "price": 9.99,
+    "quantity": 1
+  },
+  {
+    "id": 6,
+    "category": "lunch",
+    "name": "Healthy Meal Plan",
+    "description": "How we dream About our future",
+    "img": "https://i.ibb.co/MSLpBKz/lunch6.png",
+    "price": 23.99,
+    "quantity": 1
+  },
+  {
+    "id": 7,
+    "category": "dinner",
+    "name": "Baked Chicken",
+    "description": "How we dream About our future",
+    "img": "https://i.ibb.co/zXNnz2v/dinner1.png",
+    "price": 9.99,
+    "quantity": 1
+  },
+  {
+    "id": 8,
+    "category": "dinner",
+    "name": "Lemony Salmon Piccata",
+    "description": "How we dream About our future",
+    "img": "https://i.ibb.co/xJXmqbq/dinner2.png",
+    "price": 10.99,
+    "quantity": 1
+  },
+  {
+    "id": 9,
+    "category": "dinner",
+    "name": "Garlic Butter Baked Salmon",
+    "description": "How we dream About our future",
+    "img": "https://i.ibb.co/MgN0Wrp/dinner3.png",
+    "price": 6.99,
+    "quantity": 1
+  },
+  {
+    "id": 10,
+    "category": "dinner",
+    "name": "French Fries with Cheese",
+    "description": "How we dream About our future",
+    "img": "https://i.ibb.co/S3KMYG1/dinner4.png",
+    "price": 8.99,
+    "quantity": 1
+  },
+  {
+    "id": 11,
+    "category": "dinner",
+    "name": "Pork Tenderloin with Quinoa Pilaf",
+    "description": "How we dream About our future",
+    "img": "https://i.ibb.co/qBq3N1Y/dinner5.png",
+    "price": 12.99,
+    "quantity": 1
+  },
+  {
+    "id": 12,
+    "category": "dinner",
+    "name": "Salmon with Grapefruit and Lentil Salad",
+    "description": "How we dream About our future",
+    "img": "https://i.ibb.co/VwGfDpW/dinner6.png",
+    "price": 9.99,
+    "quantity": 1
+  },
+  {
+    "id": 13,
+    "category": "breakfast",
+    "name": "Eggs Benedict",
+    "description": "How we dream About our future",
+    "img": "https://i.ibb.co/T0wZXHZ/breakfast1.png",
+    "price": 8.99,
+    "quantity": 1
+  },
+  {
+    "id": 14,
+    "category": "breakfast",
+    "name": "Breakfast Sandwich",
+    "description": "How we dream About our future",
+    "img": "https://i.ibb.co/DzST6Pk/breakfast2.png",
+    "price": 9.99,
+    "quantity": 1
+  },
+  {
+    "id": 15,
+    "category": "breakfast",
+    "name": "Baked Chicken",
+    "description": "How we dream About our future",
+    "img": "https://i.ibb.co/59KVsqD/breakfast3.png",
+    "price": 10.99,
+    "quantity": 1
+  },
+  {
+    "id": 16,
+    "category": "breakfast",
+    "name": "Bagel an Cream Cheese",
+    "description": "How we dream About our future",
+    "img": "https://i.ibb.co/FWPFjkk/breakfast4.png",
+    "price": 6.99,
+    "quantity": 1
+  },
+  {
+    "id": 17,
+    "category": "breakfast",
+    "name": "Full Breakfast Fried Egg Toast Brunch",
+    "description": "How we dream About our future",
+    "img": "https://i.ibb.co/VLVMk2z/breakfast5.png",
+    "price": 3.99,
+    "quantity": 1
+  },
+  {
+    "id": 18,
+    "category": "breakfast",
+    "name": "Toast Croissant Fried Egg",
+    "description": "How we dream About our future",
+    "img": "https://i.ibb.co/MSLpBKz/lunch6.png",
+    "price": 19.99,
+    "quantity": 1
+  }
+]
