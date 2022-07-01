@@ -8,7 +8,7 @@ import ArchitectureIcon from "../../images/icons/Group 245.png";
 
 const About = () => {
   return (
-    <div className="max-w-[1100px] mx-auto my-12">
+    <div className="max-w-[1100px] mx-auto my-12 px-2">
       <h1 className="md:text-4xl text-2xl font-normal text-neutral md:mb-8 mb-2 ">
         Why you choose us
       </h1>
@@ -20,7 +20,7 @@ const About = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:mt-12 mt-8 ">
         {/* items one  */}
         <div className="fastDelivery  rounded-3xl hover:shadow-2xl hover:translate-y-[-10px]  ease-in-out duration-300 ">
-          <img src={FastDelivery} alt="about-img" />
+          <img src={FastDelivery} alt="about-img" className="w-full" />
           <div className="items lg:p-4 p-2">
             <div className="foodTitle flex my-4 items-center">
               <img src={FastDeliveryIcon} alt="icon" />
@@ -52,7 +52,7 @@ const About = () => {
         </div>
         {/* items tow  */}
         <div className="GoodResponder rounded-3xl hover:shadow-2xl hover:translate-y-[-10px]  ease-in-out duration-300 ">
-          <img src={GoodResponder} alt="about-img" />
+          <img src={GoodResponder} alt="about-img" className="w-full" />
           <div className="items lg:p-4 p-2">
             <div className="foodTitle flex my-4 items-center">
               <img src={GoodResponderIcon} alt="icon" />
@@ -84,7 +84,7 @@ const About = () => {
         </div>
         {/* items three  */}
         <div className="Architecture  rounded-3xl hover:shadow-2xl hover:translate-y-[-10px]  ease-in-out duration-300 ">
-          <img src={Architecture} alt="about-img" />
+          <img src={Architecture} alt="about-img" className="w-full" />
           <div className="items lg:p-4 p-2">
             <div className="foodTitle flex my-4 items-center">
               <img src={ArchitectureIcon} alt="icon" />
