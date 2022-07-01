@@ -55,7 +55,7 @@ const Header = () => {
     </>
   );
   return (
-    <header className="max-w-[1100px] mx-auto py-4">
+    <header className="max-w-[1100px] mx-auto py-0">
       <div class="navbar bg-base-100">
         <div class="navbar-start">
           <div class="dropdown">
