@@ -47,7 +47,7 @@ const Header = () => {
       <div className="signup-btn">
         <Link
           className="text-base-100 bg-primary  font-normal my-0 py-1 px-4 rounded-3xl hover:bg-red-400  "
-          to="/login"
+          to="/signup"
         >
           SignUp
         </Link>
