@@ -2,7 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import NavLogo from "../../images/logo2.png";
 import CustomLink from "./CustomLink";
+import { signOut } from "firebase/auth";
+import auth from "../../firebase.init";
+import { useAuthState } from "react-firebase-hooks/auth";
+
 const Header = () => {
+  const [user] = useAuthState(auth);
   const links = (
     <>
       <li>
@@ -14,14 +19,16 @@ const Header = () => {
         </CustomLink>
       </li>
 
-      <li>
-        <CustomLink
-          className="hover:text-primary ease-in-out duration-300 "
-          to="/login"
-        >
-          Login
-        </CustomLink>
-      </li>
+      {!user && (
+        <li>
+          <CustomLink
+            className="hover:text-primary ease-in-out duration-300 "
+            to="/login"
+          >
+            Login
+          </CustomLink>
+        </li>
+      )}
       <li>
         <CustomLink
           className="hover:text-primary ease-in-out duration-300 "
@@ -44,14 +51,24 @@ const Header = () => {
           </svg>
         </CustomLink>
       </li>
-      <div className="signup-btn">
-        <Link
+      {user && (
+        <button
+          onClick={() => signOut(auth)}
           className="text-base-100 bg-primary  font-normal my-0 py-1 px-4 rounded-3xl hover:bg-red-400  "
-          to="/signup"
         >
-          SignUp
-        </Link>
-      </div>
+          LogOut
+        </button>
+      )}
+      {!user && (
+        <div className="signup-btn">
+          <Link
+            className="text-base-100 bg-primary  font-normal my-0 py-1 px-4 rounded-3xl hover:bg-red-400  "
+            to="/signup"
+          >
+            SignUp
+          </Link>
+        </div>
+      )}
     </>
   );
   return (
