@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Logo from "../../images/logo2.png";
 import BannerImage from "../../images/bannerbackground.png";
 import {
@@ -13,10 +13,14 @@ const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
   const navigate = useNavigate();
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
   if (loading || loadingGoogle) {
     return <h2>Loading</h2>;
   }
-  if (user || userGoogle) navigate("/");
+  if (user || userGoogle) {
+    navigate(from, { replace: true });
+  }
   const handleSubmit = (event) => {
     event.preventDefault();
     const email = event.target.email.value;

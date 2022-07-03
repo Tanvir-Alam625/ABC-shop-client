@@ -9,17 +9,16 @@ import NotFound from "./components/NotFound/NotFound";
 import SignUp from "./components/Login/SignUp";
 import { QueryClient, QueryClientProvider } from "react-query";
 import ForgetPassword from "./components/Login/ForgetPassword";
-import auth from "./firebase.init";
+import RequireAuth from "./components/shared/RequireAuth";
 
 function App() {
   const queryClient = new QueryClient();
   const location = useLocation();
-  console.log(auth?.user);
   return (
     <main>
       {/* conditional rendering header  */}
       {location.pathname === "/" || location.pathname === "/orders" ? (
-        <Header auth={auth}></Header>
+        <Header></Header>
       ) : (
         <></>
       )}
@@ -27,7 +26,14 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/orders" element={<Orders auth={auth} />} />
+          <Route
+            path="/orders"
+            element={
+              <RequireAuth>
+                <Orders />
+              </RequireAuth>
+            }
+          />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/forgetPassword" element={<ForgetPassword />} />
