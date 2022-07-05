@@ -8,18 +8,27 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 const Login = () => {
-  const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] =
-    useSignInWithGoogle(auth);
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
   const navigate = useNavigate();
   const location = useLocation();
   let from = location.state?.from?.pathname || "/";
-  if (loading || loadingGoogle) {
+  if (loading) {
     return <h2>Loading</h2>;
   }
-  if (user || userGoogle) {
-    navigate(from, { replace: true });
+  if (user) {
+    fetch("http://localhost:5000/token", {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ email: user.email }),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+        navigate(from, { replace: true });
+      });
   }
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -56,7 +65,6 @@ const Login = () => {
           />
           <span className="text-red-500 text-sm my-4 md:my-8 md:text-xl ">
             {error?.message}
-            {errorGoogle?.message}
           </span>
           <button className=" py-4 mb-6 w-full bg-primary rounded-md text-xl text-base-100">
             Login
@@ -69,14 +77,6 @@ const Login = () => {
           <Link to="/signup" className="text-primary text-xl">
             SignUp
           </Link>
-        </div>
-        <div className="login-with-social ">
-          <button
-            onClick={() => signInWithGoogle()}
-            className=" hover:text-primary shadow-md text-sm md:text-xl w-full py-4 px-2 border rounded-md "
-          >
-            Login in with Google
-          </button>
         </div>
       </div>
     </div>

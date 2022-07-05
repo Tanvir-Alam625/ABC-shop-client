@@ -8,7 +8,7 @@ const Home = () => {
   const [products, setProducts] = useState([]);
   const [spinner, setSpinner] = useState(true);
   useEffect(() => {
-    fetch("Products.json")
+    fetch("https://whispering-lake-78761.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

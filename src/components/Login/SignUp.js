@@ -3,24 +3,19 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Logo from "../../images/logo2.png";
 import BannerImage from "../../images/bannerbackground.png";
 import auth from "../../firebase.init";
-import {
-  useCreateUserWithEmailAndPassword,
-  useSignInWithGoogle,
-} from "react-firebase-hooks/auth";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 
 const SignUp = () => {
-  const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] =
-    useSignInWithGoogle(auth);
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
   let from = location.state?.from?.pathname || "/";
-  if (loading || loadingGoogle) {
+  if (loading) {
     return <h2>Loading...</h2>;
   }
-  if (user || userGoogle) {
+  if (user) {
     navigate(from, { replace: true });
   }
   const handleSubmit = (event) => {
@@ -95,14 +90,6 @@ const SignUp = () => {
           <Link to="/login" className="text-primary text-xl">
             Already have an account
           </Link>
-        </div>
-        <div className="login-with-social ">
-          <button
-            onClick={() => signInWithGoogle()}
-            className=" shadow-md hover:text-primary text-sm md:text-xl w-full py-4 px-2 border rounded-md "
-          >
-            SingUp in with Google
-          </button>
         </div>
       </div>
     </div>

@@ -1,9 +1,13 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 const Product = ({ product }) => {
-  const { name, img, price, description, quantity } = product;
+  const { _id, name, img, price, description, quantity } = product;
+  const navigate = useNavigate();
   return (
-    <div className="p-6 hover:shadow-2xl cursor-pointer rounded-lg flex flex-col justify-center items-center">
+    <div
+      onClick={() => navigate(`product/${_id}`)}
+      className="p-6 hover:shadow-2xl cursor-pointer rounded-lg flex flex-col justify-center items-center"
+    >
       <div className="product-image mb-6">
         <img src={img} alt="product-img" />
       </div>

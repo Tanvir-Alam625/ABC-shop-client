@@ -10,15 +10,11 @@ import SignUp from "./components/Login/SignUp";
 import { QueryClient, QueryClientProvider } from "react-query";
 import ForgetPassword from "./components/Login/ForgetPassword";
 import RequireAuth from "./components/shared/RequireAuth";
-import { useAuthState } from "react-firebase-hooks/auth";
-import auth from "./firebase.init";
+import ProductDetails from "./components/Home/Products/ProductDetails";
 
 function App() {
-  const [user, loading] = useAuthState(auth);
-
   const queryClient = new QueryClient();
   const location = useLocation();
-  console.log(user);
   return (
     <main>
       {/* conditional rendering header  */}
@@ -39,6 +35,7 @@ function App() {
               </RequireAuth>
             }
           />
+          <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/forgetPassword" element={<ForgetPassword />} />
