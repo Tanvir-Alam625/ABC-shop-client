@@ -1,7 +1,7 @@
 import { useState } from "react";
 const useToken = (user) => {
   const [token, seToken] = useState({});
-  fetch("http://localhost:5000/token", {
+  fetch("https://whispering-lake-78761.herokuapp.com/token", {
     method: "PUT",
     headers: {
       "content-type": "application/json",

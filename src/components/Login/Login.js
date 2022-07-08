@@ -17,7 +17,7 @@ const Login = () => {
     return <h2>Loading</h2>;
   }
   if (user) {
-    fetch("http://localhost:5000/token", {
+    fetch("https://whispering-lake-78761.herokuapp.com/token", {
       method: "PUT",
       headers: {
         "content-type": "application/json",
